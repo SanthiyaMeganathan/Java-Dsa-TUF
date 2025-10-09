@@ -221,4 +221,50 @@ class LinkedList {
         System.out.println("Target not present in the given linked list");
     }
 
+    //updtae the node:
+
+
+    public void updateTheNode(){
+        Node temp=head;
+        int size =0;
+
+        Node temp1 =head;
+
+        //we got the size over here:
+
+        while(temp1!=null){
+            size=size+1;
+            temp1=temp1.next;
+        }
+
+        //get the position where the user want to update the data:
+
+        Scanner input= new Scanner(System.in);
+        System.out.println("Enter the positio you wnat to change/ upadte");
+        int position= input.nextInt();
+
+        // this will handle if the list is empty:
+
+        if(head==null){
+            System.out.println("There is nothing to update");
+        }else if(position<0 || position >=size){
+            System.out.println("No such position exist, the position is beyond the size of the list");
+        }else{
+
+            int index =0;
+
+            while(temp!=null && index<position){
+               temp= temp.next;   
+               in       
+            }
+
+            if(temp!=null){
+                System.out.println("enter the change you want to make");
+                temp.data=input.nextInt();
+            }else{
+                System.out.println("No such position exist");
+            }
+        }
+    }
+
 }
