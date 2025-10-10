@@ -1,7 +1,6 @@
 
 import java.util.*;
 
-
 class Node {
 
     int data;
@@ -129,59 +128,184 @@ class DoublyLinkedList {
             nextNode.prev = newNode;
         }
     }
-    
 
     //deleting:
-
     //delete the beginning:
+    public void deleteAtStart() {
+        Node temp = head;
 
-    public void deleteAtStart(){
-        Node temp=head;
-
-        if(head==null){
+        if (head == null) {
 
             System.out.println("There is nothing in the list to delet");
 
-        }else if (head.next==null){
+        } else if (head.next == null) {
 
             System.out.println("you have only one element in you list, that too deleted now");
-            head=null;
-            
+            head = null;
 
-        }else{
+        } else {
 
-            head=head.next;
-            head.prev=null;
+            head = head.next;
+            head.prev = null;
             System.out.println("Now your first element is deleted");
 
         }
     }
 
-
     // to delete at end:
+    public void deleteAtEnd() {
+        Node temp = head;
 
-    public void deleteAtEnd(){
-        Node temp=head;
-
-        if(head==null){
+        if (head == null) {
             System.out.println("There is nothing to delete");
 
-        }else if (head.next==null){
+        } else if (head.next == null) {
             System.out.println("You have only one element in thelinked list");
             System.out.println("now that tooo delete ");
-            head=null;
+            head = null;
 
-        }else{
-            while(temp.next.next!=null){
-                temp=temp.next;
+        } else {
+            while (temp.next.next != null) {
+                temp = temp.next;
             }
 
-            temp.next=null;
+            temp.next = null;
             System.out.println("The element is deleted");
-        
+
         }
     }
 
+    public void deleteFromAnyWhere() {
+        if (head == null) {
+            System.out.println("List is empty. Nothing to delete.");
+            return;
+        }
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the position to delete: ");
+        int position = input.nextInt();
+
+        // Case 1: Only one node
+        if (head.next == null) {
+            head = null;
+            System.out.println("List had only one node. It’s deleted now.");
+            return;
+        }
+
+        // Case 2: Delete from beginning (position <= 0)
+        if (position <= 0) {
+            head = head.next;
+            head.prev = null;
+            System.out.println("Deleted the first node.");
+            return;
+        }
+
+        // Find size
+        int size = 0;
+        Node temp = head;
+        while (temp != null) {
+            size++;
+            temp = temp.next;
+        }
+
+        // Case 3: Delete from end (position >= size - 1)
+        if (position >= size - 1) {
+            Node last = head;
+            while (last.next.next != null) { // stop at second last node
+                last = last.next;
+            }
+            System.out.println("Deleting last node: " + last.next.data);
+            last.next = null;
+            return;
+        }
+
+        // Case 4: Delete from middle
+        Node current = head;
+        int index = 0;
+        while (index < position && current != null) {
+            current = current.next;
+            index++;
+        }
+
+        if (current != null) {
+            Node prevNode = current.prev;
+            Node nextNode = current.next;
+            prevNode.next = nextNode;
+            if (nextNode != null) {
+                nextNode.prev = prevNode;
+            }
+            System.out.println("Deleted node at position " + position + ": " + current.data);
+        }
+    }
+
+    //printing in the both direction:
+
+    public void printInBoth(){
+        Node tempF=head;
+        Node tempB =head;
+
+        if(head==null){
+            System.out.println("There is nothing to delete");
+            return;
+        }
+
+        // printing in front:
+
+        System.out.println("Printing the elements from the front");
+
+        while(tempF!=null){
+            System.out.println(tempF.data);
+            tempF=tempF.next;
+        }
+
+        //printing from the backword:
+
+        while(tempB.next!=null){
+            tempB=tempB.next;
+        }
+
+        System.out.println("Printing from backward");
+
+        while(tempB!=null){
+            System.out.println(tempB.data);
+            tempB=tempB.prev;
+        }
+    }
+
+    //searching for the element in the list:
+
+    public int searchElement(){
+
+
+        Node temp=head;
+        System.out.println("Enter the element you wnat to find in the given list");
+        Scanner input = new Scanner(System.in);
+        int target=input.nextInt();
+
+        if(head==null){
+            System.out.println("The list is empty");
+            return -1;
+        }
+
+        int position =0;
+
+        while(temp!=null){
+            if(temp.data==target){
+                System.out.println("The element found   "+ "  " + target +"   "  +" at the position"+ position);
+                return target;
+            }
+
+            position++;
+            temp=temp.next;
+        }
+
+        System.out.println("The element you are searching for not presnt in the list");
+
+        return -1;
+        
+
+
+    }
 
     //printing:
     public void printNode() {

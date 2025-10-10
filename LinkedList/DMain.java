@@ -79,42 +79,86 @@ class DMain {
         // System.out.println("");
         // System.out.println("The list after deletion performed for 2nd time");
         // list4.printNode();
-        //list to check the deleteat end:
-        DoublyLinkedList list5 = new DoublyLinkedList();
+        // //list to check the deleteat end:
+        // DoublyLinkedList list5 = new DoublyLinkedList();
+        // System.err.println("deleting when the list as nothing");
+        // list5.deleteAtEnd();
+        // System.out.println("Adding the elements to list: only one element");
+        // list5.addAtEnd(234);
+        // System.out.println("The list has only one element and this is befor deleting anything");
+        // list5.printNode();
+        // System.out.println("Performing the deletion");
+        // list5.deleteAtEnd();
+        // System.out.println("the list after deleting the element. but it will not have any thing since we had only one element in our list");
+        // list5.addAtEnd(234);
+        // list5.addAtEnd(344);
+        // list5.addAtEnd(534);
+        // list5.addAtEnd(634);
+        // list5.addAtEnd(734);
+        // System.out.println("our list after adding 5 elements");
+        // list5.printNode();
+        // System.out.println("");
+        // System.out.println("deleting the last node");
+        // list5.deleteAtEnd();
+        // System.out.println("");
+        // System.out.println("The list after deleting the last elemnt");
+        // list5.printNode();
+        // DoublyLinkedList list6 = new DoublyLinkedList();
+        // // what if the list is empty:
+        // list6.deleteFromAnyWhere();
+        // //adding one element to the list:
+        // list6.addAtEnd(23);
+        // System.out.println("");
+        // System.out.println("The list before deleting when we have only one element in our list");
+        // list6.printNode();
+        // System.out.println("");
+        // list6.deleteFromAnyWhere();
+        // System.out.println("that one element also deleted");
+        // list6.addAtEnd(23);
+        // list6.addAtEnd(43);
+        // list6.addAtEnd(53);
+        // list6.addAtEnd(63);
+        // list6.addAtEnd(73);
+        // list6.addAtEnd(83);
+        // System.out.println("The list before deletmg anything from the list");
+        // list6.printNode();
+        // System.out.println("");
+        // System.out.println("The list after deleting the  node at the asked position");
+        // list6.deleteFromAnyWhere();
+        // System.out.println("");
+        // list6.deleteFromAnyWhere();
+        //list to print backward and frontward:
+        // DoublyLinkedList list7 = new DoublyLinkedList();
 
-        System.err.println("deleting when the list as nothing");
+        // System.out.println("Printing when the list as nothing");
 
-        list5.deleteAtEnd();
+        // list7.printInBoth();
 
-        System.out.println("Adding the elements to list: only one element");
+        // list7.addAtEnd(45);
+        // list7.addAtEnd(55);
+        // list7.addAtEnd(65);
+        // list7.addAtEnd(75);
+        // list7.addAtEnd(85);
 
-        list5.addAtEnd(234);
+        // System.out.println("printing ths list in both front and back:");
 
-        System.out.println("The list has only one element and this is befor deleting anything");
+        // list7.printInBoth();
 
-        list5.printNode();
+        //list to search fro the element:
 
-        System.out.println("Performing the deletion");
+        DoublyLinkedList list8 = new DoublyLinkedList();
+        list8.searchElement();
 
-        list5.deleteAtEnd();
+        list8.addAtEnd(100);
+        list8.addAtEnd(200);
+        list8.addAtEnd(300);
+        list8.addAtEnd(400);
+        list8.addAtEnd(500);
 
-        System.out.println("the list after deleting the element. but it will not have any thing since we had only one element in our list");
+        list8.searchElement();
 
-        list5.addAtEnd(234);
-        list5.addAtEnd(344);
-        list5.addAtEnd(534);
-        list5.addAtEnd(634);
-        list5.addAtEnd(734);
 
-        System.out.println("our list after adding 5 elements");
-        list5.printNode();
 
-        System.out.println("");
-        System.out.println("deleting the last node");
-        list5.deleteAtEnd();
-        System.out.println("");
-        System.out.println("The list after deleting the last elemnt");
-        list5.printNode();
 
     }
 }
