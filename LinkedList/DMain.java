@@ -144,18 +144,69 @@ class DMain {
 
         // list7.printInBoth();
 
-        //list to search fro the element:
+        // //list to search fro the element:
 
-        DoublyLinkedList list8 = new DoublyLinkedList();
-        list8.searchElement();
+        // DoublyLinkedList list8 = new DoublyLinkedList();
+        // list8.searchElement();
 
-        list8.addAtEnd(100);
-        list8.addAtEnd(200);
-        list8.addAtEnd(300);
-        list8.addAtEnd(400);
-        list8.addAtEnd(500);
+        // list8.addAtEnd(100);
+        // list8.addAtEnd(200);
+        // list8.addAtEnd(300);
+        // list8.addAtEnd(400);
+        // list8.addAtEnd(500);
 
-        list8.searchElement();
+        // list8.searchElement();
+
+
+        // //list to check the return the referenc:
+
+
+        // DoublyLinkedList list9 = new DoublyLinkedList();
+
+        // list9.findNodeRef();
+
+        // list9.addAtEnd(56);   
+        // list9.addAtEnd(66);
+        
+        // list9.addAtEnd(76);
+        
+        // list9.addAtEnd(86);
+        
+        // list9.addAtEnd(96);
+
+        // System.out.println("");
+        // System.out.println("print the elements in list");
+
+        // list9.printNode();
+        // System.out.println("");
+        // list9.findNodeRef();
+
+        //list to chcek the upadation:
+
+        DoublyLinkedList list10 = new DoublyLinkedList();
+
+        System.out.println("When we try to upadate the list , when the list is empty");
+        list10.updateNodeValue();
+
+        System.out.println("Adding the elements to the list");
+        list10.addAtEnd(123);
+        list10.addAtEnd(223);
+        list10.addAtEnd(323);
+        list10.addAtEnd(423);
+        list10.addAtEnd(523);
+
+        System.out.println("");
+        System.out.println("The list before updating anything");
+        list10.printNode();
+
+        System.out.println("");
+        System.out.println("Now we are going to update");
+        list10.updateNodeValue();
+        System.out.println("");
+        System.out.println("The list after updating the value");
+        System.out.println("");
+        list10.printNode();
+
 
 
 

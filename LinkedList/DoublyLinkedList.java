@@ -307,6 +307,72 @@ class DoublyLinkedList {
 
     }
 
+
+    //finding the node reference of the target value:
+
+    public int findNodeRef(){
+        
+        Node temp =head;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the target you want to find");
+        int target=input.nextInt();
+
+
+        if(head==null){
+        System.out.println("there is nothing in the list");
+        return -1;
+        }
+
+        int position =0;
+
+      
+
+        while(temp!=null){
+            if(temp.data==target){
+                System.out.println("The target found"+temp+ " "+ " the element is target" + target + " at the position"+ position );
+                return target;
+            }
+            temp=temp.next;
+            position++;
+
+
+        }
+        System.out.println("The target not found");
+        return-1;
+    }
+
+    // Updtaing the node:
+
+    public void updateNodeValue(){
+        if(head==null){
+            System.out.println("The list is empty");
+        }
+
+        Node temp =head;
+        System.out.println("Enter the value you want to update");
+
+        Scanner input = new Scanner(System.in);
+        int target = input.nextInt();
+
+        while(temp!=null){
+            if(temp.data==target){
+                System.out.println("The target you want to upadtae is found");
+                System.out.println("Enter the value that you want to update");
+                temp.data=input.nextInt();
+                return;
+                
+            }
+            temp = temp.next;
+        }
+        System.out.println("the target you are searching for not found");
+
+        return;
+    }
+
+    
+
+
+
     //printing:
     public void printNode() {
         Node temp = head;
