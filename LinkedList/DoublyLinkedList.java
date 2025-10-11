@@ -239,128 +239,114 @@ class DoublyLinkedList {
     }
 
     //printing in the both direction:
+    public void printInBoth() {
+        Node tempF = head;
+        Node tempB = head;
 
-    public void printInBoth(){
-        Node tempF=head;
-        Node tempB =head;
-
-        if(head==null){
+        if (head == null) {
             System.out.println("There is nothing to delete");
             return;
         }
 
         // printing in front:
-
         System.out.println("Printing the elements from the front");
 
-        while(tempF!=null){
+        while (tempF != null) {
             System.out.println(tempF.data);
-            tempF=tempF.next;
+            tempF = tempF.next;
         }
 
         //printing from the backword:
-
-        while(tempB.next!=null){
-            tempB=tempB.next;
+        while (tempB.next != null) {
+            tempB = tempB.next;
         }
 
         System.out.println("Printing from backward");
 
-        while(tempB!=null){
+        while (tempB != null) {
             System.out.println(tempB.data);
-            tempB=tempB.prev;
+            tempB = tempB.prev;
         }
     }
 
     //searching for the element in the list:
+    public int searchElement() {
 
-    public int searchElement(){
-
-
-        Node temp=head;
+        Node temp = head;
         System.out.println("Enter the element you wnat to find in the given list");
         Scanner input = new Scanner(System.in);
-        int target=input.nextInt();
+        int target = input.nextInt();
 
-        if(head==null){
+        if (head == null) {
             System.out.println("The list is empty");
             return -1;
         }
 
-        int position =0;
+        int position = 0;
 
-        while(temp!=null){
-            if(temp.data==target){
-                System.out.println("The element found   "+ "  " + target +"   "  +" at the position"+ position);
+        while (temp != null) {
+            if (temp.data == target) {
+                System.out.println("The element found   " + "  " + target + "   " + " at the position" + position);
                 return target;
             }
 
             position++;
-            temp=temp.next;
+            temp = temp.next;
         }
 
         System.out.println("The element you are searching for not presnt in the list");
 
         return -1;
-        
-
 
     }
 
-
     //finding the node reference of the target value:
+    public int findNodeRef() {
 
-    public int findNodeRef(){
-        
-        Node temp =head;
+        Node temp = head;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the target you want to find");
-        int target=input.nextInt();
+        int target = input.nextInt();
 
-
-        if(head==null){
-        System.out.println("there is nothing in the list");
-        return -1;
+        if (head == null) {
+            System.out.println("there is nothing in the list");
+            return -1;
         }
 
-        int position =0;
+        int position = 0;
 
-      
-
-        while(temp!=null){
-            if(temp.data==target){
-                System.out.println("The target found"+temp+ " "+ " the element is target" + target + " at the position"+ position );
+        while (temp != null) {
+            if (temp.data == target) {
+                System.out.println("The target found" + temp + " " + " the element is target" + target + " at the position" + position);
                 return target;
             }
-            temp=temp.next;
+            temp = temp.next;
             position++;
-
 
         }
         System.out.println("The target not found");
-        return-1;
+        return -1;
     }
 
     // Updtaing the node:
-
-    public void updateNodeValue(){
-        if(head==null){
+    public void updateNodeValue() {
+        if (head == null) {
             System.out.println("The list is empty");
         }
 
-        Node temp =head;
+        Node temp = head;
         System.out.println("Enter the value you want to update");
 
         Scanner input = new Scanner(System.in);
         int target = input.nextInt();
 
-        while(temp!=null){
-            if(temp.data==target){
+        while (temp != null) {
+            if (temp.data == target) {
                 System.out.println("The target you want to upadtae is found");
                 System.out.println("Enter the value that you want to update");
-                temp.data=input.nextInt();
+                temp.data = input.nextInt();
                 return;
-                
+
             }
             temp = temp.next;
         }
@@ -369,9 +355,109 @@ class DoublyLinkedList {
         return;
     }
 
-    
+    //swapping the two nodes completly not its value:
+    public void swapNode() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the first element to swap:");
+        int val1 = input.nextInt();
+        System.out.println("Enter the second element to swap:");
+        int val2 = input.nextInt();
 
+        if (head == null || head.next == null) {
+            System.out.println("List has less than 2 nodes. Cannot swap.");
+            return;
+        }
 
+        if (val1 == val2) {
+            System.out.println("Both values are same. No swap needed.");
+            return;
+        }
+
+        Node node1 = null, node2 = null;
+        Node temp = head;
+
+        // Step 1: Find the nodes
+        while (temp != null) {
+            if (temp.data == val1) {
+                node1 = temp;
+            }
+            if (temp.data == val2) {
+                node2 = temp;
+            }
+            temp = temp.next;
+        }
+
+        if (node1 == null || node2 == null) {
+            System.out.println("One or both nodes not found. Cannot swap.");
+            return;
+        }
+
+        // Step 2: Swap nodes safely
+        // Handle adjacent nodes
+        if (node1.next == node2) {
+            Node prev = node1.prev;
+            Node next = node2.next;
+
+            if (prev != null) {
+                prev.next = node2;
+            }
+            node2.prev = prev;
+
+            node2.next = node1;
+            node1.prev = node2;
+
+            node1.next = next;
+            if (next != null) {
+                next.prev = node1;
+            }
+        } else if (node2.next == node1) { // node2 before node1
+            Node prev = node2.prev;
+            Node next = node1.next;
+
+            if (prev != null) {
+                prev.next = node1;
+            }
+            node1.prev = prev;
+
+            node1.next = node2;
+            node2.prev = node1;
+
+            node2.next = next;
+            if (next != null) {
+                next.prev = node2;
+            }
+        } else { // non-adjacent nodes
+            Node prev1 = node1.prev, next1 = node1.next;
+            Node prev2 = node2.prev, next2 = node2.next;
+
+            if (prev1 != null) {
+                prev1.next = node2;
+            }
+            if (next1 != null) {
+                next1.prev = node2;
+            }
+            node2.prev = prev1;
+            node2.next = next1;
+
+            if (prev2 != null) {
+                prev2.next = node1;
+            }
+            if (next2 != null) {
+                next2.prev = node1;
+            }
+            node1.prev = prev2;
+            node1.next = next2;
+        }
+
+        // Step 3: Update head if needed
+        if (head == node1) {
+            head = node2;
+        } else if (head == node2) {
+            head = node1;
+        }
+
+        System.out.println("Swapped nodes " + val1 + " and " + val2);
+    }
 
     //printing:
     public void printNode() {

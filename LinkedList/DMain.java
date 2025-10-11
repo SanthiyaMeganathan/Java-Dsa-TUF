@@ -2,203 +2,177 @@
 class DMain {
 
     public static void main(String[] args) {
-        // 
-        // DoublyLinkedList list = new DoublyLinkedList();
-        // //printing when list as nothing;
-
-        // System.out.println("PRINTING WHEN LIST AS NOTHING");
-        // list.printNode();
-        // //first elemennt:
-        // System.out.println("we are adding the fisrt element");
-        // list.addFirstNode(19);
-        // System.out.println();
-        // System.out.println("Printing the list after adding the first element");
-        // list.printNode();
-        // System.out.println("");
-        // System.out.println("THe above element is the fisrt element of the list");
-        // //list to implement add the elemnt at the head :
-        // DoublyLinkedList list1 = new DoublyLinkedList();
-        // list1.addAtBeginning(2);
-        // list1.addAtBeginning(3);
-        // list1.addAtBeginning(9);
-        // list1.addAtBeginning(6);
-        // list1.addAtBeginning(11);
-        // System.out.println("THe list which is created using doubly linked list");
-        // list1.printNode();
-        // //list to add at end:
-        // DoublyLinkedList list2 = new DoublyLinkedList();
-        // list2.addAtEnd(3);
-        // list2.addAtEnd(6);
-        // list2.addAtEnd(9);
-        // list2.addAtEnd(12);
-        // list2.addAtEnd(15);
-        // System.out.println("The doubly linked list when the linked list is created by adding new node to end");
-        // list2.printNode();
-        // // list to add ever wher i want:
-        // DoublyLinkedList list3 = new DoublyLinkedList();
-        // list3.addAtEnd(5);
-        // list3.addAtEnd(10);
-        // list3.addAtEnd(15);
-        // list3.addAtEnd(20);
-        // list3.addAtEnd(25);
-        // list3.addAtEnd(30);
-        // System.out.println("");
-        // System.out.println("The list before inserting in given position");
-        // list3.printNode();
-        // list3.addAtAnywhere(988);
-        // System.out.println("");
-        // System.out.println("The list after adding element in particular position");
-        // list3.printNode();
-        // //list to delete the element at the start:
-        // DoublyLinkedList list4 = new DoublyLinkedList();
-        // list4.deleteAtStart();
-        // list4.addAtEnd(2);
-        // System.out.println("");
-        // System.out.println("the element we have in the list:");
-        // System.out.println("");
-        // list4.printNode();
-        // System.out.println("The list after we deleting the first node when we have only one node");
-        // list4.deleteAtStart();
-        // list4.printNode();
-        // //adding more elements to the list:
-        // list4.addAtEnd(30);
-        // list4.addAtEnd(40);
-        // list4.addAtEnd(50);
-        // list4.addAtEnd(60);
-        // list4.addAtEnd(70);
-        // System.out.println("");
-        // System.out.println("The list before deleting the first element");
-        // list4.printNode();
-        // list4.deleteAtStart();
-        // System.out.println("");
-        // System.out.println("The list after deleting the fisrt element");
-        // list4.printNode();
-        // System.out.println("");
-        // System.out.println("Again perfirming the deleting of the first node");
-        // list4.deleteAtStart();
-        // System.out.println("");
-        // System.out.println("The list after deletion performed for 2nd time");
-        // list4.printNode();
-        // //list to check the deleteat end:
-        // DoublyLinkedList list5 = new DoublyLinkedList();
-        // System.err.println("deleting when the list as nothing");
-        // list5.deleteAtEnd();
-        // System.out.println("Adding the elements to list: only one element");
-        // list5.addAtEnd(234);
-        // System.out.println("The list has only one element and this is befor deleting anything");
-        // list5.printNode();
-        // System.out.println("Performing the deletion");
-        // list5.deleteAtEnd();
-        // System.out.println("the list after deleting the element. but it will not have any thing since we had only one element in our list");
-        // list5.addAtEnd(234);
-        // list5.addAtEnd(344);
-        // list5.addAtEnd(534);
-        // list5.addAtEnd(634);
-        // list5.addAtEnd(734);
-        // System.out.println("our list after adding 5 elements");
-        // list5.printNode();
-        // System.out.println("");
-        // System.out.println("deleting the last node");
-        // list5.deleteAtEnd();
-        // System.out.println("");
-        // System.out.println("The list after deleting the last elemnt");
-        // list5.printNode();
-        // DoublyLinkedList list6 = new DoublyLinkedList();
-        // // what if the list is empty:
-        // list6.deleteFromAnyWhere();
-        // //adding one element to the list:
-        // list6.addAtEnd(23);
-        // System.out.println("");
-        // System.out.println("The list before deleting when we have only one element in our list");
-        // list6.printNode();
-        // System.out.println("");
-        // list6.deleteFromAnyWhere();
-        // System.out.println("that one element also deleted");
-        // list6.addAtEnd(23);
-        // list6.addAtEnd(43);
-        // list6.addAtEnd(53);
-        // list6.addAtEnd(63);
-        // list6.addAtEnd(73);
-        // list6.addAtEnd(83);
-        // System.out.println("The list before deletmg anything from the list");
-        // list6.printNode();
-        // System.out.println("");
-        // System.out.println("The list after deleting the  node at the asked position");
-        // list6.deleteFromAnyWhere();
-        // System.out.println("");
-        // list6.deleteFromAnyWhere();
-        //list to print backward and frontward:
-        // DoublyLinkedList list7 = new DoublyLinkedList();
-
-        // System.out.println("Printing when the list as nothing");
-
-        // list7.printInBoth();
-
-        // list7.addAtEnd(45);
-        // list7.addAtEnd(55);
-        // list7.addAtEnd(65);
-        // list7.addAtEnd(75);
-        // list7.addAtEnd(85);
-
-        // System.out.println("printing ths list in both front and back:");
-
-        // list7.printInBoth();
-
-        // //list to search fro the element:
-
-        // DoublyLinkedList list8 = new DoublyLinkedList();
-        // list8.searchElement();
-
-        // list8.addAtEnd(100);
-        // list8.addAtEnd(200);
-        // list8.addAtEnd(300);
-        // list8.addAtEnd(400);
-        // list8.addAtEnd(500);
-
-        // list8.searchElement();
-
-
-        // //list to check the return the referenc:
-
-
-        // DoublyLinkedList list9 = new DoublyLinkedList();
-
-        // list9.findNodeRef();
-
-        // list9.addAtEnd(56);   
-        // list9.addAtEnd(66);
         
-        // list9.addAtEnd(76);
-        
-        // list9.addAtEnd(86);
-        
-        // list9.addAtEnd(96);
+        DoublyLinkedList list = new DoublyLinkedList();
+        //printing when list as nothing;
 
-        // System.out.println("");
-        // System.out.println("print the elements in list");
-
-        // list9.printNode();
-        // System.out.println("");
-        // list9.findNodeRef();
-
+        System.out.println("PRINTING WHEN LIST AS NOTHING");
+        list.printNode();
+        //first elemennt:
+        System.out.println("we are adding the fisrt element");
+        list.addFirstNode(19);
+        System.out.println();
+        System.out.println("Printing the list after adding the first element");
+        list.printNode();
+        System.out.println("");
+        System.out.println("THe above element is the fisrt element of the list");
+        //list to implement add the elemnt at the head :
+        DoublyLinkedList list1 = new DoublyLinkedList();
+        list1.addAtBeginning(2);
+        list1.addAtBeginning(3);
+        list1.addAtBeginning(9);
+        list1.addAtBeginning(6);
+        list1.addAtBeginning(11);
+        System.out.println("THe list which is created using doubly linked list");
+        list1.printNode();
+        //list to add at end:
+        DoublyLinkedList list2 = new DoublyLinkedList();
+        list2.addAtEnd(3);
+        list2.addAtEnd(6);
+        list2.addAtEnd(9);
+        list2.addAtEnd(12);
+        list2.addAtEnd(15);
+        System.out.println("The doubly linked list when the linked list is created by adding new node to end");
+        list2.printNode();
+        // list to add ever wher i want:
+        DoublyLinkedList list3 = new DoublyLinkedList();
+        list3.addAtEnd(5);
+        list3.addAtEnd(10);
+        list3.addAtEnd(15);
+        list3.addAtEnd(20);
+        list3.addAtEnd(25);
+        list3.addAtEnd(30);
+        System.out.println("");
+        System.out.println("The list before inserting in given position");
+        list3.printNode();
+        list3.addAtAnywhere(988);
+        System.out.println("");
+        System.out.println("The list after adding element in particular position");
+        list3.printNode();
+        //list to delete the element at the start:
+        DoublyLinkedList list4 = new DoublyLinkedList();
+        list4.deleteAtStart();
+        list4.addAtEnd(2);
+        System.out.println("");
+        System.out.println("the element we have in the list:");
+        System.out.println("");
+        list4.printNode();
+        System.out.println("The list after we deleting the first node when we have only one node");
+        list4.deleteAtStart();
+        list4.printNode();
+        //adding more elements to the list:
+        list4.addAtEnd(30);
+        list4.addAtEnd(40);
+        list4.addAtEnd(50);
+        list4.addAtEnd(60);
+        list4.addAtEnd(70);
+        System.out.println("");
+        System.out.println("The list before deleting the first element");
+        list4.printNode();
+        list4.deleteAtStart();
+        System.out.println("");
+        System.out.println("The list after deleting the fisrt element");
+        list4.printNode();
+        System.out.println("");
+        System.out.println("Again perfirming the deleting of the first node");
+        list4.deleteAtStart();
+        System.out.println("");
+        System.out.println("The list after deletion performed for 2nd time");
+        list4.printNode();
+        //list to check the deleteat end:
+        DoublyLinkedList list5 = new DoublyLinkedList();
+        System.err.println("deleting when the list as nothing");
+        list5.deleteAtEnd();
+        System.out.println("Adding the elements to list: only one element");
+        list5.addAtEnd(234);
+        System.out.println("The list has only one element and this is befor deleting anything");
+        list5.printNode();
+        System.out.println("Performing the deletion");
+        list5.deleteAtEnd();
+        System.out.println("the list after deleting the element. but it will not have any thing since we had only one element in our list");
+        list5.addAtEnd(234);
+        list5.addAtEnd(344);
+        list5.addAtEnd(534);
+        list5.addAtEnd(634);
+        list5.addAtEnd(734);
+        System.out.println("our list after adding 5 elements");
+        list5.printNode();
+        System.out.println("");
+        System.out.println("deleting the last node");
+        list5.deleteAtEnd();
+        System.out.println("");
+        System.out.println("The list after deleting the last elemnt");
+        list5.printNode();
+        DoublyLinkedList list6 = new DoublyLinkedList();
+        // what if the list is empty:
+        list6.deleteFromAnyWhere();
+        //adding one element to the list:
+        list6.addAtEnd(23);
+        System.out.println("");
+        System.out.println("The list before deleting when we have only one element in our list");
+        list6.printNode();
+        System.out.println("");
+        list6.deleteFromAnyWhere();
+        System.out.println("that one element also deleted");
+        list6.addAtEnd(23);
+        list6.addAtEnd(43);
+        list6.addAtEnd(53);
+        list6.addAtEnd(63);
+        list6.addAtEnd(73);
+        list6.addAtEnd(83);
+        System.out.println("The list before deletmg anything from the list");
+        list6.printNode();
+        System.out.println("");
+        System.out.println("The list after deleting the  node at the asked position");
+        list6.deleteFromAnyWhere();
+        System.out.println("");
+        list6.deleteFromAnyWhere();
+        list to print backward and frontward:
+        DoublyLinkedList list7 = new DoublyLinkedList();
+        System.out.println("Printing when the list as nothing");
+        list7.printInBoth();
+        list7.addAtEnd(45);
+        list7.addAtEnd(55);
+        list7.addAtEnd(65);
+        list7.addAtEnd(75);
+        list7.addAtEnd(85);
+        System.out.println("printing ths list in both front and back:");
+        list7.printInBoth();
+        //list to search fro the element:
+        DoublyLinkedList list8 = new DoublyLinkedList();
+        list8.searchElement();
+        list8.addAtEnd(100);
+        list8.addAtEnd(200);
+        list8.addAtEnd(300);
+        list8.addAtEnd(400);
+        list8.addAtEnd(500);
+        list8.searchElement();
+        //list to check the return the referenc:
+        DoublyLinkedList list9 = new DoublyLinkedList();
+        list9.findNodeRef();
+        list9.addAtEnd(56);   
+        list9.addAtEnd(66);
+        list9.addAtEnd(76);
+        list9.addAtEnd(86);
+        list9.addAtEnd(96);
+        System.out.println("");
+        System.out.println("print the elements in list");
+        list9.printNode();
+        System.out.println("");
+        list9.findNodeRef();
         //list to chcek the upadation:
-
         DoublyLinkedList list10 = new DoublyLinkedList();
-
         System.out.println("When we try to upadate the list , when the list is empty");
         list10.updateNodeValue();
-
         System.out.println("Adding the elements to the list");
         list10.addAtEnd(123);
         list10.addAtEnd(223);
         list10.addAtEnd(323);
         list10.addAtEnd(423);
         list10.addAtEnd(523);
-
         System.out.println("");
         System.out.println("The list before updating anything");
         list10.printNode();
-
         System.out.println("");
         System.out.println("Now we are going to update");
         list10.updateNodeValue();
@@ -206,10 +180,25 @@ class DMain {
         System.out.println("The list after updating the value");
         System.out.println("");
         list10.printNode();
+        //list to swap the node:
+        DoublyLinkedList list11 = new DoublyLinkedList();
 
+        System.out.println("Adding nodes to the list...");
+        list11.addAtEnd(12);
+        list11.addAtEnd(13);
+        list11.addAtEnd(14);
+        list11.addAtEnd(15);
+        list11.addAtEnd(16);
+        list11.addAtEnd(17);
 
+        System.out.println("\nThe list before swapping:");
+        list11.printNode();
 
+        System.out.println("\nNow performing swap:");
+        list11.swapNode();
 
+        System.out.println("\nThe list after swapping:");
+        list11.printNode();
 
     }
 }
